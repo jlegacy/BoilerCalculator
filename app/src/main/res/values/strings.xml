@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BoilerCalculator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Diameter_of_Boiler_Inches">Diameter of Boiler - Inches</string>
+    <string name="Enter_Diameter_of_FireTube_Inches">Diameter of FireTube Inches</string>
+    <string name="Height_of_FireTube_Inches">Height of FireTube Inches</string>
+    <string name="Clearance_Between_Firetubes_Inches">Clearance Between Firetubes Inches</string>
+    <string name="Distance_Between_Firetube_Centers_Inches">Distance Between Firetube Centers Inches</string>
+    <string name="Length_Firetube_Midline_Inches">Length Firetube Midline Inches</string>
+    <string name="Circumference_of_Firetube_Inches">Circumference of Firetube Inches</string>
+    <string name="Max_Distance_Firetube_from_Center_Inches">Max Distance Firetube from Center Inches</string>
+    <string name="Number_of_Firetubes">Number of Firetubes</string>
+    <string name="Working_Surface_Square_Inches_per_of_Total">Working Surface Square Inches per of Total</string>
+    <string name="Total_Heating_Surface_Square_Inches">Total Heating Surface Square Inches</string>
+    <string name="Length_of_Tube">Length of Tube</string>
+    <string name="title_activity_draw_graphics">DrawGraphics</string>
+
+</resources>

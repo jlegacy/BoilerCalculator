@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dip">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Diameter_of_Boiler_Inches" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="0"
+                android:id="@+id/Diameter_of_Boiler_Inches"/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Enter_Diameter_of_FireTube_Inches" />
+
+            <EditText
+
+                android:id="@+id/Diameter_of_FireTube_Inches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                android:inputType="numberDecimal"
+                android:nestedScrollingEnabled="false" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Height_of_FireTube_Inches" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/Height_of_FireTube_Inches"
+                android:numeric="integer" />
+        </TableRow>
+
+        <TableRow android:layout_gravity="left|center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Clearance_Between_Firetubes_Inches" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:editable="false"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:id="@+id/Clearance_Between_Firetubes_Inches"
+                android:inputType="numberDecimal"
+                android:digits="4" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Distance_Between_Firetube_Centers_Inches" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Distance_Between_Firetube_Centers_Inches"/>
+        </TableRow>
+
+        <TableRow>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Circumference_of_Firetube_Inches" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Circumference_of_Firetube_Inches"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Number_of_Firetubes" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Number_of_Firetubes"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Working_Surface_Square_Inches_per_of_Total" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Working_Surface_Square_Inches_per_of_Total"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Total_Heating_Surface_Square_Inches" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Total_Heating_Surface_Square_Inches"
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dip"
+                android:text="@string/Length_of_Tube" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Length_of_Tube"
+
+                />
+        </TableRow>
+
+        <TableRow>
+        <Button
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="Calc"
+            android:id="@+id/calcButton" />
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
