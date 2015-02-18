@@ -11,7 +11,7 @@ abstract class FireTubeDecorator implements IFireTubeObject {
         this.myBaseObject = myInputObj;
     }
 
-    public FireTubeObject createFireTubeObject(InputObject obj) {
+    public FireTubeObjectSingleton createFireTubeObject(InputObject obj) {
         return myBaseObject.createFireTubeObject(obj);
     }
 }

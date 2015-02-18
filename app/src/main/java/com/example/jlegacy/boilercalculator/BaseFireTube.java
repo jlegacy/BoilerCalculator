@@ -1,20 +1,16 @@
 package com.example.jlegacy.boilercalculator;
 
-import android.widget.EditText;
-
-import java.util.ArrayList;
-
 /**
  * Created by jlegacy on 1/24/2015.
  */
 public class BaseFireTube implements IFireTubeObject {
 
    @Override
-    public FireTubeObject createFireTubeObject(InputObject obj) {
+    public FireTubeObjectSingleton createFireTubeObject(InputObject obj) {
 
         double pi = 3.141592653589793;
 
-        FireTubeObject myObject = new FireTubeObject();
+        FireTubeObjectSingleton myObject = FireTubeObjectSingleton.getInstance();
 
         myObject.diameterOfBoiler = obj.diameterOfBoiler;
         myObject.diameterOfFiretube = obj.diameterOfFiretube;

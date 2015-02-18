@@ -200,6 +200,15 @@
             android:text="Calc"
             android:id="@+id/calcButton" />
         </TableRow>
+
+        <TableRow>
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="Calc"
+                android:id="@+id/drawButton" />
+        </TableRow>
     </TableLayout>
     </ScrollView>
 

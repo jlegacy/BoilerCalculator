@@ -1,5 +1,6 @@
 package com.example.jlegacy.boilercalculator;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -9,30 +10,33 @@ import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
+
 import java.util.ArrayList;
 
 import java.math.BigDecimal;
 
 
-
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements OnClickListener {
     Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addListenerOnButton();
+
+        Button one = (Button) findViewById(R.id.calcButton);
+        one.setOnClickListener(this);
+
+        Button two = (Button) findViewById(R.id.drawButton);
+        two.setOnClickListener(this);
     }
 
-    public void addListenerOnButton() {
 
-        button = (Button) findViewById(R.id.calcButton);
+    @Override
+    public void onClick(View arg0) {
+        switch (arg0.getId()) {
 
-        button.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
+            case R.id.calcButton:
 
                 FireTubeObject myObject;
 
@@ -47,27 +51,32 @@ public class MainActivity extends ActionBarActivity {
                 edit_text = (EditText) findViewById(R.id.Height_of_FireTube_Inches);
                 myInputs.heightOfFiretube = Double.parseDouble(edit_text.getText().toString());
 
-                IFireTubeObject myFireTubeObject  = new GraphicDecorator(new BaseFireTube());
+                IFireTubeObject myFireTubeObject = new GraphicDecorator(new BaseFireTube());
 
                 DisplayMetrics metrics = new DisplayMetrics();
                 getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
                 int x = metrics.widthPixels;
 
-
-                FireTubeObject myFireTubes = myFireTubeObject.createFireTubeObject(myInputs);
-
+                FireTubeObjectSingleton myFireTubes = myFireTubeObject.createFireTubeObject(myInputs);
 
                 DisplayFireTubes(myFireTubes);
+                break;
 
-            }
+            case R.id.drawButton:
 
-        });
+                FireTubeObjectSingleton myInstance = FireTubeObjectSingleton.getInstance();
+
+                Intent intent = new Intent(this, DrawFireTubesActivity.class);
+                startActivity(intent);
+
+                break;
+        }
 
     }
 
-    public void DisplayFireTubes(FireTubeObject obj)
-    {
+
+    public void DisplayFireTubes(FireTubeObjectSingleton obj) {
 
         EditText edit_text;
 
@@ -90,8 +99,6 @@ public class MainActivity extends ActionBarActivity {
         edit_text.setText(String.valueOf(obj.numberOfFireTubes));
 
     }
-
-
 
 
     @Override

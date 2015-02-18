@@ -17,5 +17,8 @@
     <string name="Total_Heating_Surface_Square_Inches">Total Heating Surface Square Inches</string>
     <string name="Length_of_Tube">Length of Tube</string>
     <string name="title_activity_draw_graphics">DrawGraphics</string>
+    <string name="title_activity_draw_fire_tubes">DrawFireTubesActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

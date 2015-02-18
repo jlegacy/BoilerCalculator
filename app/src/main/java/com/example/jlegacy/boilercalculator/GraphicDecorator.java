@@ -45,15 +45,16 @@ public class GraphicDecorator extends FireTubeDecorator {
     }
 
     @Override
-    public FireTubeObject createFireTubeObject(InputObject obj) {
+    public FireTubeObjectSingleton createFireTubeObject(InputObject obj) {
         return addGraphics(myBaseObject.createFireTubeObject(obj));
     }
 
-    private FireTubeObject addGraphics(FireTubeObject inputObj) {
+    private FireTubeObjectSingleton addGraphics(FireTubeObjectSingleton inputObj) {
 
+
+        inputObj.points = new ArrayList<>();
         List<SearchPoints> myPoints = new ArrayList<>();
 
-        inputObj.points = new ArrayList<Point>();
         double pi = 3.141592653589793;
 
         Point passedPoint = new Point(500, 500);
@@ -62,6 +63,7 @@ public class GraphicDecorator extends FireTubeDecorator {
         initPoint.point = new Point(500, 500);
         initPoint.processed = false;
         myPoints.add(initPoint);
+        inputObj.points.add(initPoint.point);
 
         for (int z = 0; z < myPoints.size(); z++) {
 
@@ -76,6 +78,7 @@ public class GraphicDecorator extends FireTubeDecorator {
                             addPoints.point = new Point(createPoint.x, createPoint.y);
                             addPoints.processed = false;
                             myPoints.add(addPoints);
+                            inputObj.points.add(addPoints.point);
                         }
                     }
                 }
