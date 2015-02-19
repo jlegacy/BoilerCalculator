@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:id="@+id/scrollView"
-        android:layout_gravity="center_horizontal">
+        android:background="#ffffffff"
+        android:fillViewport="false"
+        android:layout_gravity="left">
 
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dip">
+        android:layout_gravity="center">
 
-        <TableRow>
+        <TableRow android:layout_width="wrap_content"
+            android:baselineAligned="false">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -30,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:text="0"
-                android:id="@+id/Diameter_of_Boiler_Inches"/>
+                android:id="@+id/Diameter_of_Boiler_Inches"
+                android:width="100dp" />
         </TableRow>
 
 
@@ -195,19 +198,21 @@
         <TableRow>
         <Button
             android:layout_width="0dip"
-            android:layout_height="fill_parent"
+            android:layout_height="50dip"
             android:layout_weight="1"
-            android:text="Calc"
-            android:id="@+id/calcButton" />
+            android:text="@string/Calc"
+            android:id="@+id/calcButton"
+            android:width="20dp" />
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:text="Draw"
+                android:id="@+id/drawButton" />
         </TableRow>
 
         <TableRow>
-            <Button
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="Calc"
-                android:id="@+id/drawButton" />
+
         </TableRow>
     </TableLayout>
     </ScrollView>

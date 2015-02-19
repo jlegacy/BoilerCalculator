@@ -20,5 +20,6 @@
     <string name="title_activity_draw_fire_tubes">DrawFireTubesActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="Calc">Calc</string>
 
 </resources>

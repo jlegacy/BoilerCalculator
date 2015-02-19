@@ -52,6 +52,12 @@ public class DrawFireTubesView extends View {
         greenPaint = new Paint();
         greenPaint.setColor(Color.GREEN);
 
+        View v = this;
+
+        v.setBackgroundColor(Color.WHITE);
+
+        v.invalidate();
+
 
     }
 
@@ -74,7 +80,7 @@ public class DrawFireTubesView extends View {
         double scale = width / myInstance.diameterOfBoiler;
 
         //Draw Diameter
-        canvas.drawCircle(width / 2, height / 2, (float) myInstance.diameterOfBoiler / 2 * (float) scale, whitePaint);
+        canvas.drawCircle(width / 2, height / 2, (float) myInstance.diameterOfBoiler / 2 * (float) scale, redPaint);
 
 
         int xPosScale = width / 2;
@@ -84,6 +90,8 @@ public class DrawFireTubesView extends View {
         for (Point element : myInstance.points) {
             canvas.drawCircle(((float) element.x - 500) * (float) scale + xPosScale, ((float) element.y - 500) * (float) scale + yPosScale, (float) myInstance.diameterOfFiretube / 2 * (float) scale, greenPaint);
         }
+
+
 
         invalidate();
     }
